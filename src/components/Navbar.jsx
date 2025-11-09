@@ -41,15 +41,9 @@ export default function Navbar() {
               to="/login"
               className="px-3 py-1 transition border rounded hover:bg-indigo-100"
             >
-              User Login
+              Login
             </Link>
           )}
-          <Link
-            to="/admin"
-            className="px-3 py-1 transition bg-green-300 border rounded hover:bg-green-500"
-          >
-            Admin Panel
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
