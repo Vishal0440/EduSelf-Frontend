@@ -46,7 +46,7 @@ export default function Navbar() {
           )}
           <Link
             to="/admin"
-            className="hidden px-3 py-1 transition bg-green-300 border rounded hover:bg-green-500"
+            className="px-3 py-1 transition bg-green-300 border rounded hover:bg-green-500"
           >
             Admin Panel
           </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="px-4 pt-2 pb-4 space-y-2 font-medium text-center shadow-md bg-gradient-to-r from-indigo-200 to-white md:hidden">
+        <div className="flex flex-col justify-center px-4 pt-2 pb-4 space-y-2 font-medium text-center shadow-md bg-gradient-to-r from-indigo-200 to-white md:hidden">
           <Link
             to="/"
             className="block hover:text-indigo-600"
@@ -123,19 +123,26 @@ export default function Navbar() {
                 logout();
                 setIsOpen(false);
               }}
-              className="w-full px-3 py-1 text-white transition bg-indigo-600 rounded hover:bg-indigo-700"
+              className="block w-32 p-2 mx-auto text-white transition bg-indigo-600 rounded hover:bg-indigo-700"
             >
               Logout
             </button>
           ) : (
             <Link
               to="/login"
-              className="inline-block w-20 px-3 py-1 transition border rounded bg-slate-300 hover:bg-indigo-50"
+              className="block w-32 p-2 mx-auto transition border rounded bg-slate-300 hover:bg-indigo-50"
               onClick={() => setIsOpen(false)}
             >
-              Login
+              User Login
             </Link>
           )}
+          <Link
+            to="/admin"
+            className="block w-32 p-2 mx-auto transition bg-green-300 border rounded hover:bg-green-500"
+            onClick={() => setIsOpen(false)}
+          >
+            Admin Panel
+          </Link>
         </div>
       )}
     </nav>
