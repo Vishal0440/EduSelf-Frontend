@@ -46,7 +46,7 @@ export default function Navbar() {
           )}
           <Link
             to="/admin"
-            className="px-3 py-1 transition bg-green-300 border rounded hover:bg-green-500"
+            className="hidden px-3 py-1 transition bg-green-300 border rounded hover:bg-green-500"
           >
             Admin Panel
           </Link>

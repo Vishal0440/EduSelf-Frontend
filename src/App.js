@@ -50,7 +50,7 @@ function AppContent() {
       </main>
 
       {!isAdminPage && <Footer />}
-      <Toaster />
+      <Toaster position="top-right" />
     </div>
   );
 }
