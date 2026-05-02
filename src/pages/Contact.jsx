@@ -1,6 +1,6 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,10 +20,10 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_vvzvn1w", // Replace with your actual EmailJS service ID
+        "service_x2c85xf", // Replace with your actual EmailJS service ID
         "template_3wxko2h", // Replace with your template ID
         formData,
-        "PNaWo44vq6FYHjI2s" // Replace with your public key
+        "PNaWo44vq6FYHjI2s", // Replace with your public key
       )
       .then(
         () => {
@@ -33,7 +33,7 @@ export default function Contact() {
         (err) => {
           console.error("FAILED...", err);
           alert("Something went wrong. Please try again later.");
-        }
+        },
       );
   };
 
